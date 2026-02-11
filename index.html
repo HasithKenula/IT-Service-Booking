@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShield LK | Premier Laptop Repair & Tech Support in Sri Lanka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0F172A',
+                        secondary: '#334155',
+                        accent: '#3B82F6',
+                        highlight: '#10B981',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            animation: pulse-slow 8s infinite;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
+                            <i class="fas fa-microchip text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-white tracking-tight">TechShield<span class="text-blue-500">LK</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-white hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="dashboard.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Technician Portal</a>
+                    </div>
+                </div>
+                <div>
+                    <a href="booking.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-blue-500/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20 relative">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1597872250990-d958dac4653a?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/80 to-transparent z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        Available Island-wide in Sri Lanka
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+                        Expert Tech Repair <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Done Right.</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
+                        From Colombo to Kandy, we fix your laptops and gadgets with precision. Fast, reliable, and professional service tailored for your needs.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="booking.html" class="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-2">
+                            Fix My Device <i class="fas fa-arrow-right text-blue-600"></i>
+                        </a>
+                        <a href="#services" class="bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center relative">
+                    <div class="absolute -inset-4 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+                    <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1000&auto=format&fit=crop" alt="Laptop Repair" class="relative rounded-2xl shadow-2xl border-4 border-gray-800/50 transform rotate-3 hover:rotate-0 transition-all duration-700 w-full max-w-md animate-float object-cover aspect-[4/3]">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-10 -left-10 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-green-500 p-3 rounded-xl text-white">
+                            <i class="fas fa-check text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold text-lg">100% Guaranteed</p>
+                            <p class="text-gray-400 text-xs">Quality Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-blue-50 skew-x-12 opacity-50 z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-2">Our Capabilities</h2>
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Premium Tech Solutions</h3>
+                <p class="text-gray-600 text-lg">We don't just fix; we enhance. Experience the best technical support in Sri Lanka.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-blue-200 transition-all group card-hover">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                        <i class="fas fa-tools text-2xl text-blue-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Hardware Repair</h4>
+                    <p class="text-gray-500 mb-6">Chip-level motherboard repairs, screen replacements, and battery upgrades for all major brands (HP, Dell, Apple, ASUS).</p>
+                    <a href="booking.html" class="text-blue-600 font-semibold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                        Book Repair <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-blue-200 transition-all group card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
+                    <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
+                        <i class="fas fa-laptop-code text-2xl text-purple-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Software & OS</h4>
+                    <p class="text-gray-500 mb-6">Windows/Mac OS installation, virus removal, data recovery, and performance optimization to make your PC fly.</p>
+                    <a href="booking.html" class="text-purple-600 font-semibold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                        Get Support <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-blue-200 transition-all group card-hover">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                        <i class="fas fa-network-wired text-2xl text-green-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Network Solutions</h4>
+                    <p class="text-gray-500 mb-6">Office networking, Wi-Fi setup, server maintenance, and remote IT support for small businesses.</p>
+                    <a href="booking.html" class="text-green-600 font-semibold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                        Request Setup <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <h3 class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">5k+</h3>
+                    <p class="text-gray-400 font-medium">Devices Fixed</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl md:text-5xl font-bold text-purple-500 mb-2">98%</h3>
+                    <p class="text-gray-400 font-medium">Success Rate</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl md:text-5xl font-bold text-green-500 mb-2">24h</h3>
+                    <p class="text-gray-400 font-medium">Turnaround</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl md:text-5xl font-bold text-red-500 mb-2">10+</h3>
+                    <p class="text-gray-400 font-medium">Locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-600 transform -skew-y-2 origin-bottom-right scale-110"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to fix your device?</h2>
+            <p class="text-blue-100 text-xl mb-10">Don't let a broken device slow you down. Book a repair with TechShield LK today.</p>
+            <a href="booking.html" class="bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-105 inline-flex items-center gap-3">
+                Book Appointment <i class="fas fa-concierge-bell"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fas fa-microchip text-blue-500 text-2xl"></i>
+                        <span class="text-2xl font-bold text-white">TechShield<span class="text-blue-500">LK</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">The leading tech repair service in Sri Lanka. Trusted by thousands for quality and speed.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="booking.html" class="hover:text-blue-400 transition-colors">Book Repair</a></li>
+                        <li><a href="dashboard.html" class="hover:text-blue-400 transition-colors">Technician Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Laptop Repair</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Smartphone Fix</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Data Recovery</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt mt-1 text-blue-500"></i>
+                            <span>No. 123, Galle Road,<br>Colombo 03, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-blue-500"></i>
+                            <span>+94 77 123 4567</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span>support@techshield.lk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p>&copy; 2024 TechShield LK. All rights reserved. Designed with <i class="fas fa-heart text-red-500"></i> in Sri Lanka.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
